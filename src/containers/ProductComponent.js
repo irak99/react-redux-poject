@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-const ProductComponent = (params) => {
+const ProductComponent = (props) => {
+  // console.log("props", props);
   const products = useSelector((state) => state.allProducts.products);
   const renderList = products.map((product) => {
     const { id, category, title, image, price } = product;
@@ -21,6 +22,7 @@ const ProductComponent = (params) => {
             </div>
           </div>
         </Link>
+        <button onClick={props.handler(id)}>test</button>
       </div>
     );
   });

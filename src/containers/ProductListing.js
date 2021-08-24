@@ -8,7 +8,9 @@ const ProductListing = () => {
   const products = useSelector((state) => state);
 
   const dispatch = useDispatch();
-
+  const handler = (some) => {
+    console.log("test", some);
+  };
   const fetchProduct = async () => {
     const response = await axios
       .get("https://fakestoreapi.com/products")
@@ -24,7 +26,7 @@ const ProductListing = () => {
   console.log("pr", products);
   return (
     <div className="ui grid container">
-      <ProductComponent />
+      <ProductComponent handler={() => handler} />
     </div>
   );
 };
