@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProductListing from "./containers/ProductListing";
 import Header from "./containers/Header";
+import Login from "./containers/Login"
 import "./App.css";
 import ProductDetail from "./containers/ProductDetail";
-
 function App() {
   return (
     <div className="App">
@@ -12,6 +12,8 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={ProductListing} />
+          <Route path="/category/:id" component={ProductListing} />
+          <Route path="/login" component={Login} />
           <Route path="/product/:productId" component={ProductDetail} />
           <Route>404 Not Found!</Route>
         </Switch>

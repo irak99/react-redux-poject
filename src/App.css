@@ -13,19 +13,15 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar{
+  margin-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.ui.menu .active.item{
+  padding-bottom: 20px;
+}
+.ui.card>.image>img, .ui.cards>.card>.image>img{
+  height: 300px!important;
 }
 
 @keyframes App-logo-spin {

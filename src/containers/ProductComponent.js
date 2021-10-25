@@ -17,12 +17,11 @@ const ProductComponent = (props) => {
               <div className="content">
                 <div className="header">{title}</div>
                 <div className="meta price">${price}</div>
-                <div className="meta">{category}</div>
+                <Link to={'/'+category} className="meta">{category}</Link>
               </div>
             </div>
           </div>
         </Link>
-        <button onClick={props.handler(id)}>test</button>
       </div>
     );
   });

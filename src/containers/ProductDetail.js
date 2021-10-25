@@ -5,13 +5,18 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   selectedProducts,
   removeSelectedProducts,
+  addToCart,
 } from "../redux/actions/productActions";
 const ProductDetail = () => {
   const { productId } = useParams();
   let product = useSelector((state) => state.product);
   const { image, title, price, category, description } = product;
-  console.log("test", productId);
   const dispatch = useDispatch();
+  const toogleCart = (e) => {
+    // e.preventDefault();
+    dispatch(addToCart(product))
+    console.log('You clicked submit.', e);
+  }
   const fetchProductDetail = async (id) => {
     const response = await axios
       .get(`https://fakestoreapi.com/products/${id}`)
@@ -21,7 +26,6 @@ const ProductDetail = () => {
     console.log(response.data);
     dispatch(selectedProducts(response.data));
   };
-
   useEffect(() => {
     if (productId && productId !== "") fetchProductDetail(productId);
     return () => {
@@ -47,7 +51,7 @@ const ProductDetail = () => {
                 </h2>
                 <h3 className="ui brown block header">{category}</h3>
                 <p>{description}</p>
-                <div className="ui vertical animated button" tabIndex="0">
+                <div onClick={toogleCart} className="ui vertical animated button" tabIndex="0">
                   <div className="hidden content">
                     <i className="shop icon"></i>
                   </div>
