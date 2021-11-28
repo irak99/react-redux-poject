@@ -1,11 +1,16 @@
 import { ActionTypes } from "../contants/action-types";
 
-export const loginRedcuer = ({type,payload})=>{
+const initialState = {
+    login: {},
+  };
+export const loginReducer = (state = {},{type,payload})=>{
     switch (type) {
         case ActionTypes.LOGIN:
-            return {payload}
+            console.log('login reducer',payload);
+            return {...payload}
     
         default:
-            break;
+            return state;
     }
 }
+

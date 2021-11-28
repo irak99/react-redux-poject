@@ -6,7 +6,7 @@ import {
   selectedProducts,
   removeSelectedProducts,
   addToCart,
-} from "../redux/actions/productActions";
+} from "../../redux/actions/productActions";
 const ProductDetail = () => {
   const { productId } = useParams();
   let product = useSelector((state) => state.product);

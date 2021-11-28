@@ -1,0 +1,15 @@
+.shop-header-menu{
+    position:fixed;
+    top:0;
+}
+.shop-small-banner{
+    top: 50%;
+    position: absolute !important;
+    z-index: 1;
+    left: 25%;
+}
+.shop-header{
+    height: 80vh;
+    background: rgb(84,11,14);
+background: linear-gradient(90deg, rgba(84,11,14,1) 0%, rgba(224,159,62,1) 25%, rgba(255,243,176,1) 50%, rgba(224,159,62,1) 75%, rgba(84,11,14,1) 100%);
+}
