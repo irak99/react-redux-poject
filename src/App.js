@@ -6,6 +6,7 @@ import Home from "./containers/Home"
 import {Header} from "./containers/Header";
 import {Cart} from "./containers/ShoppingCart";
 import {Login} from "./containers/Login/index"
+import {AboutUs} from './containers/AboutUs'
 import "./App.css";
 
 import ProductDetail from "./containers/Products/ProductDetail";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/category" component={ProductListing} />
           <Route path="/login" component={Login} />
           <Route path="/cart" component={Cart} />
+          <Route path="/aboutus" component={AboutUs} />
           <Route path="/product/:productId" component={ProductDetail} />
           <Route>404 Not Found!</Route>
         </Switch>

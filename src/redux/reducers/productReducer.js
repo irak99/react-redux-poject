@@ -28,7 +28,9 @@ export const cartReducer = (state = {}, { type, payload }) => {
   switch (type) {
     case ActionTypes.ADD_TO_CART:
       console.log('payload',payload ,'state',state);
-      cart.push(payload)
+      if(!cart.includes(payload)){
+        cart.push(payload)
+      }
       return cart ;
     case ActionTypes.REMOVE_FROM_CART:
       return {};

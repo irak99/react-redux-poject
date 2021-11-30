@@ -47,7 +47,7 @@ class MenuExamplePointing extends Component {
                 <NavDropdown.Item href="#action/3.4">Се</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link as={Link} to='/category' href="#">Акција</Nav.Link>
-              <Nav.Link href="#pricing">За нас</Nav.Link>
+              <Nav.Link as={Link} to='/aboutus' href="#">За нас</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link as={Link} to='/login' href="#deets"><Person size={20}></Person>{this.props.user.username}</Nav.Link>
